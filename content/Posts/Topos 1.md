@@ -1,17 +1,46 @@
 ---
-title: Topos Theory Introduction
-draft: true
+title: Frame and Locales
+draft: false
 created: 0001-01-01
 tags:
   - Topos
 ---
-This will be some notes on Topos Theory pedagogically based on lectures given out by [Joyal[^1]]. The approach that Joyal takes is to introduce the theory of Frames/Locales prior to general notion of an elementary topos, i.e., a "bottom-up" approach. It can be seen that locales embody most of the phenomena that toposes do and there is a coherent analogy that can be seen between in general posets and categories, in turn toposes. 
+This will be some notes on Topos Theory pedagogically based on lectures given out by [Joyal[^1]]. The approach that Joyal has taken is to introduce the theory of Frames/Locales prior to the general notion of an elementary topos, a "bottom-up" approach. It indeed can be seen that locales embody most of the phenomena that toposes do and there is a coherent analogy that can be made between posets and categories, in turn toposes. 
+## Motivation
+Suppose $X$ is a space (topological space, manifold, etc). Often we study these spaces by looking at maps from $X$ to a ring object $R$ in the same category of spaces. Since $R$ is a ring object, we have $\text{Hom}(X, R)$ is a ring where can verify $\text{Hom}(-, R): \mathbf{Space} \to \mathbf{Ring}$ is a functor. Very often one can describe a left adjoint $\text{Spec}: \mathbf{Ring}^\text{op} \to \mathbf{Space}$ such that 
+$$
+\text{Hom}_{\mathbf{Space}}(\text{Spec}(A), X) \equiv \text{Hom}_{\mathbf{Ring}^\text{op}}(A, \text{Hom}(X, R))
+$$
+It is well-known that adjoint pairs can be canonically restricted to equivalences on full-subcategories where units and counits are isomorphisms; as such this pair gives notions to many famous dualities such as the Stone duality, Gelfand–Naimark duality or the duality in algebraic geometry between commutative rings and affine schemes.  
+We have a similar situation where Frames will act like Rings and we consider looking from topological spaces. 
+## Frames and Locales
+Recall the Sierpinski Space $S$ which has points $\{0, 1\}$ with open sets $\{ \emptyset, \{ 1 \}, \{ 0, 1 \} \}$. We know the functor $\mathcal{O} : \mathbf{Top}^\text{op} \to \mathbf{Set}$ which takes open sets of $X$ is representable with representing object $S$. Now notice to define a ring object, we need morphisms $R \times R \rightarrow R$ corresponding to the general operations $+, \cdot$. However one can notice that the Sierpinski space can have similar operations $S \times S \to S$ defined as infima and suprema
+$$
+\wedge, \vee: S \times S \rightarrow S
+$$
+which correspond to union and intersection of open sets. More commonly they're referred to as joins and meets. More importantly they behave like addition and multiplication, satisfying the distributive law 
+$$
+x \wedge (y \vee z) = (x \wedge y) \vee (x \wedge z)
+$$
+This points us to view the Sierpinski Space as behaving like a ring object, but note it clearly isn't as we have no additive inverse. This leads us to the definition of frames. 
 
-as locales embody most of the phenomena in toposes. It is also known that Localic toposes are easy to work with. 
-#### Motivation
+**Def.** A poset is a *complete lattice* if it admits arbitrary suprema and finite infima. 
+Important to note it is sufficient to have all suprema to have all infima since we can express infima as a set of lower bounds, i.e., $\inf(S) = \sup\{\text{lower bounds of }S\}$. 
 
+**Def.** A *frame* is a complete lattice such that the distributivity law holds
+$$y \wedge \left(\bigvee_{i \in I} x_i \right) = \bigvee_{i \in I} y \wedge x_i$$
 
-#### Frames and Locales
+We can see $\mathcal{O}(X)$ is a frame, where the join is just union of open sets and meet is intersection followed by interior operation. Clearly needed to ensure the resulting set is open. 
+$$
+\bigvee_{i \in I} U_{i} = \bigcup_{i \in I} U_{i}, \quad \bigwedge_{i \in I} U_i = \widehat{\bigcap_{i \in I} U_{i}}
+$$
+As such $\mathcal{O}(X)^{op}$ is not a frame in general as unions do not distribute over intersections, i.e., 
+take $U = (0, 1), V_i = \left( -\frac{1}{n}, \frac{1}{n} \right)$. 
+
+**Def.** A *morphism of frames* is defined as $\phi: A \to B$ where $A, B$ are frames such that $\phi$ preserve arbitrary joins and finite meets, with $\phi(1) = 1$, i.e., preserving the unit element for the meet. 
+
+Now if we have a continuous function $X \xrightarrow{f} Y$, we can define $\mathcal{O}(X) \xleftarrow{f^*} \mathcal{O}(Y)$ taking the preimage of $f$. It is easy to verify that this map is a morphism between frames. As such we have a contravariant functor $\mathcal{O}$ from $\mathbf{Top}$ to $\mathbf{Frm}$. 
+
 
 #### Points of Locales 
 
@@ -21,54 +50,6 @@ as locales embody most of the phenomena in toposes. It is also known that Locali
 
 
 
-Theory of locales - developed in 1950s, Charles Ehressman 
-Topos theory - as read in leinster's intro, locales embody most of the phenomena in toposes 
-Higher topos theory 
-* bottom up approach
-
-Geometry vs Algebra, 
-commutative geometry is about studying commutative rings, 
-Suppose $X$ is a space (top., manif., etc), often study spaces by looking at maps from $X$ to ring $R$, $R$ is a ring object in the category of spaces (top., manif., etc), 
-Hom(X, R) is a ring, Hom(-, R) : Spaces \to Rings, often one can describe adjoint described as Spec from Rings to Spaces, (X, Spec(A)) is bijection with probably (Hom(X, R), A), often used is how adjunctions can restrict to equivalences
-
-In the case of locales, spaces is top. spaces, 
-Sierpinski space, {0, 1}, with {1} open, all opens sets of $X$ correspond to maps (cont.) from $X$ into $U$, Sierpsinski space is like the "subobject classifier in Open(X)"
-Map(X, S) \equiv Open(X) 
-$R \times R \rightarrow R$, operations $+, \cdot$ exist for general rings; considering for the sierpinski space or
-the ring of open sets of X can have the infimum and supremum, which satisfies distributivity law just like addition and multiplication expected in general rings, i.e., the notion of frames arise 
-
-| Rings  | Schemes |
-| ------ | ------- |
-| Frames | Locales |
-
-Frame is defined as a complete lattice such that the distributivity law holds 
-$$y \wedge \left(\bigvee_{i \in I} x_i \right) = \bigvee_{i \in I} y \wedge x_i$$
-A poset is a complete lattice if it admits arbitrary suprema and infima. Important to note it is enough to have all suprema since $\inf(S) = \sup\{\text{lower bounds of }S\}$. 
-$\mathcal{O}(X)$ is a frame, suprema/join is just union, infima/meet is just intersection and taking interior to make sure it is open. As such $\mathcal{O}(X)^{op}$ is not a frame in general. 
-Note meet and join refer to finite 
-$X \xrightarrow{f} Y$, $\mathcal{O}(X) \xleftarrow{f^*} \mathcal{O}(Y)$ is a morphism between frames, which is defined as 
-$\phi: A \to B$ where $A, B$ are frames such that $\phi$ preserves arbitrary joins and finite meets, with $\phi(1) = 1$, i.e., preserving the unit element for the meet, so in this case $X$ would be the unit element.  
-
-We have a functor $\mathcal{O}: \mathrm{Top} \to \mathrm{Frame}^{op}$, this functor has an adjoint 
-$\mid - \mid_{top}: \mathrm{Frame}^{op} \to \mathrm{Top}$  which is defined as $\mid A \mid_{top} = Hom(A, [1])$, $[1] = \{0, 1\}$ where $0 < 1$. 
-$$Hom(A, \mathcal{O}(X)) \cong Hom(X, \mid A\mid_{top})$$
-We often look into the opposite category of Frames, i.e., Locales. 
-
-bijection between points of locales and closed subobjects of locales, 
-$A \xrightarrow{\phi} [1], \ker \phi = \{ x \mid \phi(x) = 0 \}, \kappa(\phi) = \bigvee_{x \in \ker \phi} x = u$, $u$ is meet irreducible 
-
-Morphism of frames has a right adjoint in the category of posets, 
-closure (monadic) operator and comonadic operator induced by an adjunction between postes, i.e., Galois connection (particular case of monads)
-Particularly in frames, the closure operatore also preserves meets, we call this nucleus. Dually, conucleus for comonadic operators which preserve joins(?). 
-Motivation by factorization systems, i.e., in category of sets, every function can be decomposed into a surjective then injective function trivially, we also have something similar for morphisms of frames or more generally morphisms between Posets. There is a bijection between these "quotient" frames $A_{\sigma} = \{ x \mid \sigma(x) = x \}$ and nucleus' 
-Lastly free frames can be made similar to the usual free forgetful adjunction between algebras, i.e., Set to CMon to CRings, whats more interesting is if we think of the monads induced by each free-forgetful adjunction pair, their composition is also a monad. In general, Beck considered when this is true, a similar result holds in Frame to lower semi lattice to posets. 
-
-```
-| Sets   | Abelian Groups | Commutative things |
-| Posets | sup-lattices   | Frames             |
-| Cat. | Presentable-cat. | Topoi | 
-```
-
-
 #### References
 [^1]:: https://www.youtube.com/watch?v=Ro8KoFFdtS4
+[^2]: Sheaves in Geometry and Logic by Maclane and Moerdjik
