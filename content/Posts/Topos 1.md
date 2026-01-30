@@ -7,9 +7,9 @@ tags:
 ---
 This will be some notes on Topos Theory pedagogically based on lectures given out by [Joyal[^1]]. The approach that Joyal has taken is introducing the theory of Frames/Locales prior to the general notion of an elementary topos, a "bottom-up" approach. It indeed can be seen that locales embody most of the phenomena that toposes do and there is a coherent analogy that can be made between posets and categories, in turn toposes. 
 ## Motivation
-Suppose $X$ is a space (topological space, manifold, etc). Often we study these spaces by looking at maps from $X$ to a ring object $R$ in the same category of spaces. Since $R$ is a ring object, we have $\text{Hom}(X, R)$ is a ring where can verify $\text{Hom}(-, R): \mathbf{Space} \to \mathbf{Ring}$ is a functor. Very often one can describe a left adjoint $\text{Spec}: \mathbf{Ring}^\text{op} \to \mathbf{Space}$ such that 
+Suppose $X$ is a space (topological space, manifold, etc). Often we study these spaces by looking at maps from $X$ to a ring object $R$ in the same category of spaces. Since $R$ is a ring object, we have $\text{Hom}(X, R)$ is a ring where can verify $\text{Hom}(-, R): \mathbf{Space}^\text{op} \to \mathbf{Ring}$ is a functor. Very often one can describe a right adjoint $\text{Spec}: \mathbf{Ring}^\text{op} \to \mathbf{Space}$ such that in a rough sense 
 $$
-\text{Hom}_{\mathbf{Ring^\text{op}}}(\text{Spec}(A), X) \equiv \text{Hom}_{\mathbf{Space}}(A, \text{Hom}(X, R))
+\text{Hom}_{\mathbf{Ring^\text{op}}}(\text{Hom}(X, R), A) \cong \text{Hom}_{\mathbf{Space}}(X, \text{Spec}(A))
 $$
 It is well-known that adjoint pairs can be canonically restricted to equivalences on full subcategories where the units and counits are isomorphisms; as such this pair gives notions to many famous dualities such as the Stone duality, Gelfand–Naimark duality or the duality in algebraic geometry between commutative rings and affine schemes.  
 We will have a similar situation by looking at topological spaces and having frames act like rings. 
@@ -24,7 +24,7 @@ x \wedge (y \vee z) = (x \wedge y) \vee (x \wedge z)
 $$
 This points us to view the Sierpinski Space as behaving much like a ring object, but note it clearly isn't as we have no additive inverse. This leads us to develop the definition of frames. 
 
-*Def.* A poset is a **complete lattice** if it admits arbitrary suprema and finite infima. 
+*Def.* A poset is a **complete lattice** if it admits arbitrary suprema and infima. 
 Important to note it is sufficient to have all suprema to have all infima since we can express infima as a set of lower bounds, i.e., $\inf(X) = \sup\{\text{lower bounds of }X\}$. 
 
 *Def.* A **frame** is a complete lattice such that the distributivity law holds

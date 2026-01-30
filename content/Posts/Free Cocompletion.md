@@ -38,12 +38,12 @@ The counit is an equivalence iff $F$ is cocontinuous. The forward direction is o
 $$
 \text{colim}_{(C, c) \in \text{el}(X)} F(H_{C}) \cong F(X)
 $$
-which is a strong condition, but doesn't directly show that $F$ preserves all colimits of any small shapes. But $F$ can be to be cocontinuous as $\text{Lan}_{Y}(G)$ is always a cocontinuous functor when $Y$ is the yoneda embedding and $F$ is equivalent to it. To see this there are multiple methods, the use of ends is the easiest, 
+which is a strong condition, but doesn't directly show that $F$ preserves all colimits of any small shapes. But $F$ being cocontinuous can be proven as $\text{Lan}_{Y}(G)$ is always a cocontinuous functor when $Y$ is the yoneda embedding, which $F$ is equivalent to. To see this there are multiple methods, the use of ends is the easiest, 
 $$
 \text{Lan}_{Y}(G)(X) \cong \int^{c \in \mathbf{C}} \mathbf{Psh(C)}(Yc, X) \cdot Gc \cong \int^{c \in \mathbf{C}} Xc \cdot Gc \cong \int^{c \in \mathbf{C}} Xc \times Gc
 $$
-where the second equivalence holds due to the yoneda lemma and the third is where the tensor/copower is isomorphic to product in the case of Sets. 
-Another motivation is for $\text{Lan}_{Y}(G)$ to be cocontinuous, the source is the presheaf category which is a nice behaving category, (i.e., is cocomplete and can actually be seen to satisfy the solution set condition with $F$, take the set as simply $\mathbf{C}$), we could think of GAFT, the $\text{Lan}_{Y}(G)$ should have a left adjoint, which indeed it does, which would also prove it's cocontinuous. 
+where the second equivalence holds due to the yoneda lemma and the third is where the tensor/copower is isomorphic to product in the case of Sets. Clearly the product by a fixed set has a right adjoint, making it cocontinuous, and coends commute with colimits being defined by colimits, proving our desired. 
+Another motivation is following a thought experiment, if $\text{Lan}_{Y}(G)$ is cocontinuous, the source is the presheaf category which is a nice behaving category, (i.e., is cocomplete and can actually be seen to satisfy the solution set condition with $F$, take the set as simply $\mathbf{C}$), we could think of GAFT, which should imply the $\text{Lan}_{Y}(G)$ has a left adjoint, which indeed we show it does, which would also prove it's cocontinuous. 
 $$
 \begin{align}
 (\text{Lan}_{Y}(G)(X), E) \cong \text{lim}_{(C, c) \in \text{el}(X)}(G(C), E) &\cong \text{lim}_{(C, c) \in \text{el}(X)} G^*(D)(C) \\  
@@ -51,4 +51,4 @@ $$
 &\cong (X, G^*(D))
 \end{align}
 $$
-As such our other desired full subcategory is $\text{Cocont}(\mathbf{Psh(C)}, \mathbf{E})$, the category of cocontinuous functors, which means we naturally obtain an equivalence $- \circ y : \text{Cocont}(\mathbf{Psh(C)}, \mathbf{E}) \rightarrow [\mathbf{C}, \mathbf{E}]$, which is precisely the free cocompletion property. 
+As such our other desired full subcategory is $\text{Cocont}(\mathbf{Psh(C)}, \mathbf{E})$, the category of cocontinuous functors, which means we naturally obtain an equivalence $- \circ Y : \text{Cocont}(\mathbf{Psh(C)}, \mathbf{E}) \rightarrow [\mathbf{C}, \mathbf{E}]$, which is precisely the free cocompletion property. 
