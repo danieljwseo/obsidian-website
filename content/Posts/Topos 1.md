@@ -1,7 +1,7 @@
 ---
 title: Frame and Locales
 draft: false
-created: 0001-01-01
+created: 2026-01-01
 tags:
   - Topos
 ---

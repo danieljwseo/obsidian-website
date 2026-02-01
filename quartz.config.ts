@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { TikzJax } from "./quartz/plugins/transformers/tikz"
 
 /**
  * Quartz 4 Configuration
@@ -72,6 +73,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "mathjax" }), // Changed katex to mathjax
+      TikzJax(),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

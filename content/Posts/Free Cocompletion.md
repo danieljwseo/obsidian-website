@@ -1,25 +1,23 @@
 ---
 title: Free Cocompletion of Presheaf Categories
 tags:
-created:
-draft: true
+  - KanExtension
+created: 2026-01-01
+draft: false
 ---
-This post will be following the motivation and proof of the free cocompletion property for presheaf categories, which uses one of my favourite concept of category theory, Kan Extensions. 
+This post will be following the motivation and proof of the free cocompletion property for presheaf categories using kan extensions, similar ideas and more are discussed on the [nlab](https://ncatlab.org/nlab/show/free+cocompletion)page. 
 
 **Theorem.** Consider a small category $\mathbf{C}$ and a cocomplete category $\mathbf{E}$. For every functor $F: \mathbf{C} \to \mathbf{E}$, we have a unique cocomplete functor $F_{!}$ from $\mathbf{Psh(C)} \to \mathbf{E}$ such that precomposing with the Yoneda embedding is naturally isomorphic to $F$. 
 ```tikz 
-\usepackage{tikz-cd}
+\usepackage{tikz-cd}[row sep=large, column sep=large]
 
 \begin{document}
 	\begin{tikzcd}[scale=3]
-%% 		    \int F \arrow[rr, "\int \alpha"] \arrow[dr, "p_F"'] & & \int G \arrow[dl, "p_G"]\\
-                                                        %% & \cal C & %% %%
 	        \mathbf{C} \arrow[d, "Y"] \arrow[dr, "F"] & \\ 
 	        \mathbf{Psh(C)} \arrow[r, dashed, "F_{!}"] & \mathbf{E}
 	\end{tikzcd}
 \end{document}
 ```
-
 The proof is as follows; we already have a functor precomposition by the yoneda embedding,
 $$
 - \circ Y: [\mathbf{Psh(C)}, \mathbf{E}] \leftrightarrow [\mathbf{C}, \mathbf{E}] : \text{Lan}_{Y}
@@ -38,7 +36,7 @@ The counit is an equivalence iff $F$ is cocontinuous. The forward direction is o
 $$
 \text{colim}_{(C, c) \in \text{el}(X)} F(H_{C}) \cong F(X)
 $$
-which is a strong condition, but doesn't directly show that $F$ preserves all colimits of any small shapes. But $F$ being cocontinuous can be proven as $\text{Lan}_{Y}(G)$ is always a cocontinuous functor when $Y$ is the yoneda embedding, which $F$ is equivalent to. To see this there are multiple methods, the use of ends is the easiest, 
+which is a strong condition (cocontinuous on shapes corresponding to category of elements) but isn't obvious to how this directly proves $F$ preserves all colimits of any small shapes. The key observation is $\text{Lan}_{Y}(G)$ is always a cocontinuous functor when $Y$ is the yoneda embedding, which $F$ is equivalent to. To see this there are multiple methods, the use of ends is the easiest, 
 $$
 \text{Lan}_{Y}(G)(X) \cong \int^{c \in \mathbf{C}} \mathbf{Psh(C)}(Yc, X) \cdot Gc \cong \int^{c \in \mathbf{C}} Xc \cdot Gc \cong \int^{c \in \mathbf{C}} Xc \times Gc
 $$
@@ -52,3 +50,4 @@ $$
 \end{align}
 $$
 As such our other desired full subcategory is $\text{Cocont}(\mathbf{Psh(C)}, \mathbf{E})$, the category of cocontinuous functors, which means we naturally obtain an equivalence $- \circ Y : \text{Cocont}(\mathbf{Psh(C)}, \mathbf{E}) \rightarrow [\mathbf{C}, \mathbf{E}]$, which is precisely the free cocompletion property. 
+
