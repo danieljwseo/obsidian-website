@@ -44,9 +44,9 @@ where the second equivalence holds due to the yoneda lemma and the third is wher
 Another motivation is following a thought experiment, if $\text{Lan}_{Y}(G)$ is cocontinuous, the source is the presheaf category which is a nice behaving category, (i.e., is cocomplete and can actually be seen to satisfy the solution set condition with $F$, take the set as simply $\mathbf{C}$), we could think of GAFT, which should imply the $\text{Lan}_{Y}(G)$ has a left adjoint, which indeed we show it does, which would also prove it's cocontinuous. 
 $$
 \begin{align}
-(\text{Lan}_{Y}(G)(X), E) \cong \text{lim}_{(C, c) \in \text{el}(X)}(G(C), E) &\cong \text{lim}_{(C, c) \in \text{el}(X)} G^*(D)(C) \\  
-&\cong \text{lim}_{(C, c) \in \text{el}(X)} (H_{C}, G^*(D))  \\
-&\cong (X, G^*(D))
+(\text{Lan}_{Y}(G)(X), E) \cong \text{lim}_{(C, c) \in \text{el}(X)}(G(C), E) &\cong \text{lim}_{(C, c) \in \text{el}(X)} G^*(E)(C) \\  
+&\cong \text{lim}_{(C, c) \in \text{el}(X)} (H_{C}, G^*(E))  \\
+&\cong (X, G^*(E))
 \end{align}
 $$
 As such our other desired full subcategory is $\text{Cocont}(\mathbf{Psh(C)}, \mathbf{E})$, the category of cocontinuous functors, which means we naturally obtain an equivalence $- \circ Y : \text{Cocont}(\mathbf{Psh(C)}, \mathbf{E}) \rightarrow [\mathbf{C}, \mathbf{E}]$, which is precisely the free cocompletion property. 

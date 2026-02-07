@@ -10,4 +10,6 @@ draft: true
 2.11: just take the mapping under the terminal map, want to know it's an injection, note has a retraction or left inverse, so must be injective 
 0 -> n -> 0
 X_0 <- X_n <- X_0
-
+3.2: Yoneda 
+3.3: again obvious by Yoneda 
+3.6: 

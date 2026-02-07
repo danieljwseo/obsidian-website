@@ -50,7 +50,7 @@ $$
 \text{pt}(a) = \{ p \in \text{pt}(A) \mid p(a) = 1\}
 $$
 for $a \in A$. 
-prove indeed is a topology, define pt(f) and prove it's continuous, conclude pt is a functor 
+We can indeed prove this is a topology, define $\text{pt}(f)$ in the most natural way, and prove it's continuous, concluding $\text{pt}$ is a functor. 
 We have the adjunction as 
 $$
 \mathbf{Frm}(A, \mathcal{O}(X)) \cong \mathbf{Top}(X, \text{pt}(A))
@@ -92,6 +92,6 @@ $\sigma = gf: P \to P$ is called the **closure** or **monadic** operator, $\sigm
 Lastly free frames can be made similar to the usual free forgetful adjunction between algebras, i.e., Set to CMon to CRings, whats more interesting is if we think of the monads induced by each free-forgetful adjunction pair, their composition is also a monad. In general, Beck considered when this is true, a similar result holds in Frame to lower semi lattice to posets where the composition is a monad. 
 
 
-[^1]:: https://www.youtube.com/watch?v=Ro8KoFFdtS4
-[^2]:: Sheaves in Geometry and Logic by Maclane and Moerdjik
-[^3]:: An informal introduction to topos theory 
+[1.]:: https://www.youtube.com/watch?v=Ro8KoFFdtS4
+[2.]:: Sheaves in Geometry and Logic by Maclane and Moerdjik
+[3.]:: An informal introduction to topos theory 
