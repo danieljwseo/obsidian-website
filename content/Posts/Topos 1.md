@@ -4,8 +4,9 @@ draft: false
 created: 2026-01-01
 tags:
   - Topos
+  - Cat
 ---
-This will be some notes on Topos Theory pedagogically based on lectures given out by [Joyal[^1]]. The approach that Joyal has taken is introducing the theory of Frames/Locales prior to the general notion of an elementary topos, a "bottom-up" approach. It indeed can be seen that locales embody most of the phenomena that toposes do and there is a coherent analogy that can be made between posets and categories, in turn toposes. 
+This will be some notes on Topos Theory pedagogically based on lectures given out by [Joyal](https://www.youtube.com/watch?v=Ro8KoFFdtS4 ). The approach that Joyal has taken is introducing the theory of Frames/Locales prior to the general notion of an elementary topos, a "bottom-up" approach. It indeed can be seen that locales embody most of the phenomena that toposes do and there is a coherent analogy that can be made between posets and categories, in turn toposes. 
 ## Motivation
 Suppose $X$ is a space (topological space, manifold, etc). Often we study these spaces by looking at maps from $X$ to a ring object $R$ in the same category of spaces. Since $R$ is a ring object, we have $\text{Hom}(X, R)$ is a ring where can verify $\text{Hom}(-, R): \mathbf{Space}^\text{op} \to \mathbf{Ring}$ is a functor. Very often one can describe a right adjoint $\text{Spec}: \mathbf{Ring}^\text{op} \to \mathbf{Space}$ such that in a rough sense 
 $$
@@ -91,7 +92,7 @@ $\sigma = gf: P \to P$ is called the **closure** or **monadic** operator, $\sigm
 ## Free Frames
 Lastly free frames can be made similar to the usual free forgetful adjunction between algebras, i.e., Set to CMon to CRings, whats more interesting is if we think of the monads induced by each free-forgetful adjunction pair, their composition is also a monad. In general, Beck considered when this is true, a similar result holds in Frame to lower semi lattice to posets where the composition is a monad. 
 
-
-[1.]:: https://www.youtube.com/watch?v=Ro8KoFFdtS4
-[2.]:: Sheaves in Geometry and Logic by Maclane and Moerdjik
-[3.]:: An informal introduction to topos theory 
+## References 
+* A crash course in topos theory by [Joyal](https://www.youtube.com/watch?v=Ro8KoFFdtS4 )
+* Sheaves in Geometry and Logic by Maclane and Moerdjik
+* An informal introduction to topos theory by Leinster

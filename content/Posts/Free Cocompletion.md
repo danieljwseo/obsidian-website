@@ -2,6 +2,7 @@
 title: Free Cocompletion of Presheaf Categories
 tags:
   - KanExtension
+  - Cat
 created: 2026-01-01
 draft: false
 ---
