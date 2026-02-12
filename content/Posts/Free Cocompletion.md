@@ -42,7 +42,7 @@ $$
 \text{Lan}_{Y}(G)(X) \cong \int^{c \in \mathbf{C}} \mathbf{Psh(C)}(Yc, X) \cdot Gc \cong \int^{c \in \mathbf{C}} Xc \cdot Gc \cong \int^{c \in \mathbf{C}} Xc \times Gc
 $$
 where the second equivalence holds due to the yoneda lemma and the third is where the tensor/copower is isomorphic to product in the case of Sets. Clearly the product by a fixed set has a right adjoint, making it cocontinuous, and coends commute with colimits being defined by colimits, proving our desired. 
-Another motivation is following a thought experiment, if $\text{Lan}_{Y}(G)$ is cocontinuous, the source is the presheaf category which is a nice behaving category, (i.e., is cocomplete and can actually be seen to satisfy the solution set condition with $F$, take the set as simply $\mathbf{C}$), we could think of GAFT, which should imply the $\text{Lan}_{Y}(G)$ has a left adjoint, which indeed we show it does, which would also prove it's cocontinuous. 
+Another motivation is following this thought; if $\text{Lan}_{Y}(G)$ is cocontinuous, the source is the presheaf category which is a nice behaving category, (i.e., is cocomplete and can actually be seen to satisfy the solution set condition with $F$, the above cocontinuous on shapes corresponding to category of elements is key to proving this, take the set as simply $\mathbf{C}$), we could think of GAFT, which should imply the $\text{Lan}_{Y}(G)$ has a left adjoint, proving it's cocontinuous. We can also show an explicit adjoint as below  
 $$
 \begin{align}
 (\text{Lan}_{Y}(G)(X), E) \cong \text{lim}_{(C, c) \in \text{el}(X)}(G(C), E) &\cong \text{lim}_{(C, c) \in \text{el}(X)} G^*(E)(C) \\  

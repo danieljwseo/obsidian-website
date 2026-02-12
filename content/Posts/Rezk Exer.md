@@ -12,4 +12,5 @@ draft: true
 X_0 <- X_n <- X_0
 3.2: Yoneda 
 3.3: again obvious by Yoneda 
-3.6: 
+3.6: forward obvious, reverse obvious by X being a functor, no maps into empty set 
+3.8: 
