@@ -8,7 +8,7 @@ tags:
 ---
 This will be some notes on Topos Theory pedagogically based on lectures given out by [Joyal](https://www.youtube.com/watch?v=Ro8KoFFdtS4 ). The approach that Joyal has taken is introducing the theory of Frames/Locales prior to the general notion of an elementary topos, a "bottom-up" approach. It indeed can be seen that locales embody most of the phenomena that toposes do and there is a coherent analogy that can be made between posets and categories, in turn toposes. 
 ## Motivation
-Suppose $X$ is a space (topological space, manifold, etc). Often we study these spaces by looking at maps from $X$ to a ring object $R$ in the same category of spaces. Since $R$ is a ring object, we have $\text{Hom}(X, R)$ is a ring where can verify $\text{Hom}(-, R): \mathbf{Space}^\text{op} \to \mathbf{Ring}$ is a functor. Very often one can describe a right adjoint $\text{Spec}: \mathbf{Ring}^\text{op} \to \mathbf{Space}$ such that in a rough sense 
+Suppose $X$ is a space (topological space, manifold, etc). Often we study these spaces by looking at maps from $X$ to a ring object $R$ in the same category of spaces. Since $R$ is a ring object, we have $\text{Hom}(X, R)$ is a ring where we can verify $\text{Hom}(-, R): \mathbf{Space}^\text{op} \to \mathbf{Ring}$ is a functor. Very often one can describe a right adjoint $\text{Spec}: \mathbf{Ring}^\text{op} \to \mathbf{Space}$ such that in a rough sense 
 $$
 \text{Hom}_{\mathbf{Ring^\text{op}}}(\text{Hom}(X, R), A) \cong \text{Hom}_{\mathbf{Space}}(X, \text{Spec}(A))
 $$
